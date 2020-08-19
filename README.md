@@ -71,7 +71,7 @@ rwxrwxr-x  user  user     4 KiB  Tue Aug 18 20:09:41 2020    utils/
 Now that we have all the files we need in our environments. We will start the TF1.x container to start training:
 
 ```bash
-docker run -it --rm --network=host \
+docker run -it --rm \
    --gpus="all" \
    --shm-size=2g --ulimit memlock=-1 --ulimit stack=67108864 \
    --workdir /workspace/ \
