@@ -365,7 +365,7 @@ signature_def['serving_default']:
 Now that we have our model saved in the correct format: [TensorFlow SavedModel](https://www.tensorflow.org/guide/saved_model). We can now switch to Tensorflow 2.x container and proceed with the inference phase.
 
 
-## 2. Training Resnet50v1.5 using the TF1.x container
+## 2. Inferencing Resnet50v1.5 using the TF2.x container
 
 Let's quit the previous container with command `exit` and start the TensorFlow 2.x container:
 
