@@ -9,7 +9,7 @@ In this blogpost we will use the latest available tensorflow containers (at the 
 * **Tensorflow 1.x Container**: `docker pull nvcr.io/nvidia/tensorflow:20.07-tf1-py3`
 * **Tensorflow 2.x Container**: `docker pull nvcr.io/nvidia/tensorflow:20.07-tf2-py3`
 
-Prerequesites to be able to follow this blog posts/tutorial:
+Prerequisites to be able to follow this blog posts/tutorial:
 - We currently only support Ubuntu, you can try with other systems however we can't guarantee success.
 
 - Docker: https://docs.docker.com/get-docker/
@@ -472,11 +472,12 @@ signature_def['serving_default']:
 ```
 
 Now that we ensured that everything is the way we expected to be, let's install the dependencies we will need:
+
 ```bash
 pip install -r requirements.txt 
 ```
 
-Then, let's import the model we trained with TensorFlow 1.x into TensorFlow 2.x and execute a inference. For this we will use the following python file called `tf2_inference.py`:
+Then, let's import the model we trained with TensorFlow 1.x into TensorFlow 2.x and execute inference. For this we will use the following python file called `tf2_inference.py`:
 
 ```python
 #!/usr/bin/env python
@@ -701,11 +702,11 @@ Processing step: 197 ...
 Processing step: 198 ...
 Processing step: 199 ...
 Processing step: 200 ...
-Average step time: 0.1 sec
-Average throughput: 872 samples/sec
+Average step time: 146.4 msec
+Average throughput: 874 samples/sec:
 ```
 
 This run has been executed with an NVIDIA GPU QUADRO GV100-32GB, your throughput results may vary.
 
-With this article we have shown that you can use your model trained in TF1.x and doing inference with the latest performance optimizations that come with TF2.x
-releases. And all of this can be done with a minimal number of changes and do not impact in any form the training pipeline.
+With this article we have shown that you can use your model trained in TF1.x and do inference with the latest performance optimizations that come with TF2.x
+releases. And all of this can be done with a minimal number of changes and does not impact in any form the training pipeline.
